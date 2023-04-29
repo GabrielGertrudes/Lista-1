@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 1</title>
+<style>
+    body {
+        background-color: black;
+        color: azure;
+        font: normal 20pt Arial;
+        }
+        h1{
+            color: red;
+        }        
+        h2{
+            color: gray;
+            font: normal 18pt Arial;
+        }
+</style>
+</head>
+<body>
+    <center>
+    <h1>Exercício N°10 da lista</h1>
+    </center>
+    <h2 class="k1">Nome: Gabriel Gertrudes De Olivera<br>
+        Turma: OADSNM1AC</h2> 
+        
+        <br>
+     
+    <label for="valorCompra">Valor total da compra:</label>
+	<input type="number" id="valorCompra" name="valorCompra" required>
+
+    <br>
+
+	<button onclick="calcularPrestacoes()">Calcular prestações</button>
+
+    <br>
+
+	<p id="resultado"></p>
+
+	<script>
+		function calcularPrestacoes() {
+			var valorCompra = parseFloat(document.getElementById("valorCompra").value);
+			var valorPrestacao = valorCompra / 5;
+			document.getElementById("resultado").innerHTML = `Cada prestação ficou R$ ${valorPrestacao}`;
+		}
+	</script>
+</body>
+</html>

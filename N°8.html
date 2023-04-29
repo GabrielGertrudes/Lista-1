@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 1</title>
+<style>
+    body {
+        background-color: black;
+        color: azure;
+        font: normal 20pt Arial;
+        }
+        h1{
+            color: red;
+        }        
+        h2{
+            color: gray;
+            font: normal 18pt Arial;
+        }
+</style>
+</head>
+<body>
+        <center>
+        <h1>Exercício N°8 da lista</h1>
+        </center>
+        <h2 class="k1">Nome: Gabriel Gertrudes De Olivera<br>
+            Turma: OADSNM1AC</h2> 
+            
+            <br>
+         
+    <label for="cotacao_dolar">Cotação do dólar:</label>
+    <input type="text" id="cotacao_dolar">
+
+    <br>
+
+    <label for="quantidade_dolares">Quantidade de dólar:</label>
+    <input type="text" id="quantidade_dolares">
+
+    <br>
+
+    <button onclick="converter()">Converter para reais</button>
+
+    <br>
+    
+    <p id="resultado"></p>
+    
+    <script>
+        function converter() {
+            var cotacao_dolar = Number.parseFloat(document.getElementById("cotacao_dolar").value);
+            var quantidade_dolares = Number.parseFloat(document.getElementById("quantidade_dolares").value);
+            
+            var Valor_em_reais = quantidade_dolares * cotacao_dolar;
+
+            document.getElementById("resultado").innerHTML = "O valor em reais é R$ " + Valor_em_reais.toFixed(2);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 1</title>
+<style>
+    body {
+        background-color: black;
+        color: azure;
+        font: normal 20pt Arial;
+        }
+        h1{
+            color: red;
+        }        
+        h2{
+            color: gray;
+            font: normal 18pt Arial;
+        }
+</style>
+</head>
+<body>
+        <center>
+        <h1>Exercício N°5 da lista</h1>
+        </center>
+        <h2 class="k1">Nome: Gabriel Gertrudes De Olivera<br>
+            Turma: OADSNM1AC</h2> 
+            
+            <br>
+            
+        <label for="NomeAluno">Nome do aluno:</label>
+        <input type="text" id="NomeAluno">
+        
+        <br>
+    
+        <label for="nota1">Nota 1:</label>
+        <input type="number" id="nota1">
+        
+        <br>
+    
+        <label for="nota2">Nota 2:</label>
+        <input type="number" id="nota2">
+        
+        <br>
+    
+        <label for="nota3">Nota 3:</label>
+        <input type="number" id="nota3">
+        
+        <br>
+    
+        <button onclick="calcularMedia()">Calcular Média Final</button>
+
+        <br>
+    
+        <p id="resultado"></p>
+    
+        <script>
+            function calcularMedia() {
+
+                var NomeAluno = document.getElementById("NomeAluno").value;
+                var nota1 = parseFloat(document.getElementById("nota1").value);
+                var nota2 = parseFloat(document.getElementById("nota2").value);
+                var nota3 = parseFloat(document.getElementById("nota3").value);
+    
+                var media = (nota1 + nota2 + nota3) / 3;
+    
+                var resultado = document.getElementById("resultado");
+                resultado.innerHTML = "O aluno " + NomeAluno + " e teve sua média de: " + media.toFixed(2) ;
+            }
+    </script>
+</body>
+</html>

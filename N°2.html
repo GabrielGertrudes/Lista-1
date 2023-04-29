@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 1</title>
+<style>
+    body {
+        background-color: black;
+        color: azure;
+        font: normal 20pt Arial;
+        }
+        h1{
+            color: red;
+        }
+        h2{
+            color: gray;
+            font: normal 18pt Arial;
+        }
+        h3 {
+            color: rgb(30, 255, 0);
+            font: normal 12pt Arial;
+        }
+</style>
+</head>
+<body>
+        <center>
+        <h1> Exercício N°2 da Lista</h1>
+        </center>
+        <h2 class="k1">Nome: Gabriel Gertrudes De Olivera<br>
+            Turma: OADSNM1AC</h2> 
+        
+        <h3>Digite números para efetuar a soma, subtração, multiplicação e divisão dos mesmos!</h3>
+        
+    <label for="n1">Digite o 1° número:</label>
+    <input type="number" id="n1">
+        
+    <br>
+
+    <label for="n2">Digite o 2° número:</label>
+    <input type="number" id="n2">
+        
+    <br>
+
+    <button onclick="calcular()">Calcular</button>
+    
+    <br>
+
+    <p id="soma"></p>
+    <p id="subtracao"></p>
+    <p id="multiplicacao"></p>
+    <p id="divisao"></p>
+
+    <script>
+        function calcular() {
+            var n1 = parseInt(document.getElementById("n1").value);
+            var n2 = parseInt(document.getElementById("n2").value);
+
+            var soma = n1 + n2;
+            var subtracao = n1 - n2;
+            var multiplicacao = n1 * n2;
+            var divisao = n1 / n2;
+
+            document.getElementById("soma").innerHTML = "A soma dos números é igual a " + soma;
+            document.getElementById("subtracao").innerHTML = "A subtração dos números é igual a " + subtracao;
+            document.getElementById("multiplicacao").innerHTML = "A multiplicação dos números é igual a " + multiplicacao;
+            document.getElementById("divisao").innerHTML = "A divisão dos números é igual a " + divisao;
+        }
+    </script>
+</body>
+</html>

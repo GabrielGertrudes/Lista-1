@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 1</title>
+<style>
+    body {
+        background-color: black;
+        color: azure;
+        font: normal 20pt Arial;
+        }
+        h1{
+            color: red;
+        }            
+        h2{
+            color: gray;
+            font: normal 18pt Arial;
+        }
+</style>
+</head>
+<body>
+        <center>
+        <h1>Exercício N°4 da lista</h1>
+        </center>
+        <h2 class="k1">Nome: Gabriel Gertrudes De Olivera<br>
+            Turma: OADSNM1AC</h2> 
+            
+            <br>
+            
+    <label for="nome">Nome do Vendedor:</label>
+    <input type="text" id="nome">
+    
+    <br>
+
+    <label for="salarioFixo">Salário Fixo:</label>
+    <input type="number" id="salarioFixo">
+    
+    <br>
+
+    <label for="vendas">Total de Vendas:</label>
+    <input type="number" id="vendas">
+    
+    <br>
+
+    <button onclick="calcularSalario()">Calcular Salário</button>
+    
+    <br>
+
+    <div id="resultado"></div>
+
+    <script>
+        function calcularSalario() {
+
+            var nome = document.getElementById("nome").value;
+            var salarioFixo = parseFloat(document.getElementById("salarioFixo").value);
+            var vendas = parseFloat(document.getElementById("vendas").value);
+
+            var comissao = vendas * 0.15;
+            var salarioFinal = salarioFixo + comissao;
+
+            var resultado = document.getElementById("resultado");
+            resultado.innerHTML = "Seu nome é " + nome + ". Seu Salário Fixo é: R$ " + salarioFixo + ", e o Salário Final é igual a: R$ " + salarioFinal + ".";
+        }
+    </script>
+</body>
+</html>
